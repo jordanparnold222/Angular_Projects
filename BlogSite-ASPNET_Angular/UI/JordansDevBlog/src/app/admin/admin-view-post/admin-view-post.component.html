@@ -1,0 +1,37 @@
+<div class="container" *ngIf="post">
+    <br />
+    <br />
+    <h1>View Blog</h1>
+    <form #form="ngForm">
+
+        <div class="mb-3">
+          <label class="form-label">Id</label>
+          <input type="text" class="form-control" name="id" [(ngModel)]="post.id" readonly>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="text" class="form-control" name="title" [(ngModel)]="post.title">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Content</label>
+           <textarea class="form-control" name="id" [(ngModel)]="post.content"></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Summary</label>
+           <textarea class="form-control" name="summary" [(ngModel)]="post.summary"></textarea>
+          </div>
+                  
+          <div class="mb-3">
+            <label class="form-label">Featured Image Url</label>
+           <input class="form-control" name="featuredImageUrl" [(ngModel)]="post.featuredImageUrl">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Author</label>
+           <input class="form-control" name="Author" [(ngModel)]="post.author">
+          </div>
+    </form> 
+</div>
