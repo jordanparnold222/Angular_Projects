@@ -1,3 +1,6 @@
+My Angular project associated with the Angular Fundamentals course on PluralSight. To help myself and others understand that's happening, comments are being inserted throughout the code where necessary.
+
+
 # NgFundementals
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.16.
