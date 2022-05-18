@@ -1,12 +1,23 @@
 //This service handles the transfering of event data
 
 import { Injectable } from "@angular/core"
+import { Subject } from "rxjs"
 
 @Injectable()
 
 export class EventService   {
+
+    //Retrieves all event objects in an array
     getEvents() {
-        return EVENTS
+      let subject = new Subject()
+      setTimeout(() => 
+      {subject.next(EVENTS); subject.complete();}, 100)
+        return subject
+    }
+
+    //Retrieves a single event based on the ID provided
+    getEvent(id: number)  {
+      return EVENTS.find(event => event.id === id)
     }
 }
 

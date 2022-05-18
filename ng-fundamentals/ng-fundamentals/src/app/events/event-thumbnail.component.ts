@@ -8,8 +8,12 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
     selector: 'event-thumbnail',
     template: `
     <!--Beginning of Thumbnail structure-->
-    <div class="well hoverwell thumbnail">
+
+    <!--When clicked, div tag below allows for routing to that event's info page-->
+    <div [routerLink]="['/events', event.id]" class="well hoverwell thumbnail">
+
         <h2>{{event?.name}}</h2>
+
         <div>Date: {{event?.date}}</div>
         <div [ngStyle]="getStartTimeStyle()" [ngSwitch]="event?.time">
             Time: {{event?.time}}
