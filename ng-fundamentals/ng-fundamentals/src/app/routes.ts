@@ -1,10 +1,15 @@
+//Services and components related to the "Events App" are imported from barrels to keep things tidy
+import { 
+    EventsListComponent,
+    EventDetailsComponent,
+    CreateEventComponent,
+    EventRouteActivator,
+    EventListResolver
+} from './events/index'
+
+//Misc imports not housed within barrels
 import { Routes } from '@angular/router'
 import { Error404Component } from './errors/404.component';
-import { CreateEventComponent } from './events/create-event.component';
-import { EventDetailsComponent } from "./events/event-details/event-details.component";
-import { EventRouteActivator } from './events/event-details/event-route-activator.service';
-import { EventsListComponent } from "./events/events-list.component";
-import { EventListResolver } from './events/events-list-resolver.service';
 
 
 export const appRoutes:Routes =    [
